@@ -1,0 +1,110 @@
+{
+  "project": {
+    "name": "遊戲平台後台管理系統",
+    "version": "1.3.7",
+    "baseUrl": "http://localhost:3000",
+    "description": "完整的遊戲平台後台管理系統操作手冊"
+  },
+  "auth": {
+    "enabled": true,
+    "credentials": {
+      "username": "${TEST_USERNAME}",
+      "password": "${TEST_PASSWORD}"
+    },
+    "loginUrl": "/",
+    "loginSelectors": {
+      "username": "input[placeholder*=\"帳\"], input[type=\"text\"]",
+      "password": "input[placeholder*=\"密\"], input[type=\"password\"]",
+      "submit": "button[type=\"submit\"], button:has-text(\"登入\")"
+    },
+    "successIndicators": [
+      "window.location.hash.includes('#/dashboard')",
+      "window.location.hash.includes('#/')",
+      "!window.location.pathname.includes('/login')"
+    ]
+  },
+  "routing": {
+    "mode": "hash"
+  },
+  "browser": {
+    "headless": false,
+    "slowMo": 1000,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "timeout": 30000,
+    "locale": "zh-TW",
+    "timezoneId": "Asia/Taipei"
+  },
+  "screenshots": [
+    {
+      "name": "login_page",
+      "url": "/",
+      "description": "登入頁面",
+      "waitFor": "input, .login-form, form",
+      "folder": "01_login"
+    },
+    {
+      "name": "dashboard",
+      "url": "/#/dashboard",
+      "description": "系統首頁儀表板",
+      "waitFor": ".version-info, .env-comparison, .main-content, body",
+      "folder": "02_main",
+      "requireAuth": true
+    },
+    {
+      "name": "host_list",
+      "url": "/#/platform/hostList",
+      "description": "客戶列表管理",
+      "waitFor": ".el-table, table, .host-list, .main-content",
+      "folder": "03_platform",
+      "requireAuth": true
+    },
+    {
+      "name": "domain_list",
+      "url": "/#/platform/domainList",
+      "description": "客戶域名列表",
+      "waitFor": ".el-table, table, .domain-list, .main-content",
+      "folder": "03_platform",
+      "requireAuth": true
+    },
+    {
+      "name": "game_list",
+      "url": "/#/game/gameList",
+      "description": "遊戲列表管理",
+      "waitFor": ".el-table, table, .game-list, .main-content",
+      "folder": "04_game",
+      "requireAuth": true
+    },
+    {
+      "name": "user_list",
+      "url": "/#/userManagement/userList",
+      "description": "使用者列表管理",
+      "waitFor": ".el-table, table, .user-list, .main-content",
+      "folder": "05_user",
+      "requireAuth": true
+    },
+    {
+      "name": "permission_setting",
+      "url": "/#/userManagement/PermissionSetting",
+      "description": "權限設置",
+      "waitFor": ".permission-matrix, .permission-config, .main-content",
+      "folder": "05_user",
+      "requireAuth": true
+    }
+  ],
+  "manual": {
+    "template": "default",
+    "output": "./AUTO_GENERATED_MANUAL.md",
+    "includeTimestamp": true,
+    "metadata": {
+      "author": "MCP Manual Generator",
+      "projectName": "遊戲平台後台管理系統",
+      "version": "1.3.7"
+    }
+  },
+  "outputDir": "./screenshots",
+  "delayBetweenScreenshots": 2000,
+  "failOnError": false
+}

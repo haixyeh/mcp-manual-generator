@@ -1,0 +1,33 @@
+{
+  "project": {
+    "name": "Simple Blog",
+    "version": "1.0.0",
+    "baseUrl": "http://localhost:8080"
+  },
+  "screenshots": [
+    {
+      "name": "home",
+      "url": "/",
+      "description": "Blog homepage",
+      "waitFor": "article",
+      "folder": "01_pages"
+    },
+    {
+      "name": "about",
+      "url": "/about",
+      "description": "About page",
+      "waitFor": ".about-content",
+      "folder": "01_pages"
+    },
+    {
+      "name": "contact",
+      "url": "/contact",
+      "description": "Contact form",
+      "waitFor": "form",
+      "folder": "01_pages"
+    }
+  ],
+  "manual": {
+    "output": "./BLOG_MANUAL.md"
+  }
+}
