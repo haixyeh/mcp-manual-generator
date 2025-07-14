@@ -353,9 +353,8 @@ MIT License - 詳見 [LICENSE](LICENSE) 檔案
 
 ## 📞 支援
 
-- 📧 Email: ryanyeh@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/ryanyeh/mcp-manual-generator/issues)
-- 📖 Wiki: [GitHub Wiki](https://github.com/ryanyeh/mcp-manual-generator/wiki)
+- 📧 Email: haix.yeh@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/haixyeh/mcp-manual-generator/issues)
 
 ---
 
